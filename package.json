@@ -1,0 +1,12 @@
+{
+  "name": "kya-os-dashboard",
+  "private": true,
+  "type": "module",
+  "workspaces": ["shared", "server", "agent", "web"],
+  "scripts": {
+    "server": "npm run dev -w server",
+    "agent": "npm run start -w agent",
+    "web": "npm run dev -w web",
+    "typecheck": "npm run typecheck -ws --if-present"
+  }
+}
