@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+.kya-os
+dist
+PLAN.md
+NOTES.md

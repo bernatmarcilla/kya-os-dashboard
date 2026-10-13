@@ -2,11 +2,21 @@
   "name": "kya-os-dashboard",
   "private": true,
   "type": "module",
-  "workspaces": ["shared", "server", "agent", "web"],
+  "workspaces": [
+    "shared",
+    "server",
+    "agent",
+    "web"
+  ],
   "scripts": {
     "server": "npm run dev -w server",
     "agent": "npm run start -w agent",
     "web": "npm run dev -w web",
-    "typecheck": "npm run typecheck -ws --if-present"
+    "typecheck": "npm run typecheck -ws --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
   }
 }
