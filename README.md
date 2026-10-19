@@ -53,6 +53,7 @@ Headless variant (the script plays the human too): start the server, then `cd ag
 | `server/src/audit.ts`       | Signed audit journal and Merkle checkpoints                                                |
 | `server/src/api.ts`         | REST + SSE for the dashboard, proof re-verification with `ProofVerifier`                   |
 | `agent/src/index.ts`        | A holder-of-key agent: `generateRequestProof` on every call                                |
+| `proxy/src/index.ts`        | A stdio MCP server that signs calls for hosts that cannot (Claude Desktop)                 |
 | `web/src/state.ts`          | The UI as a projection of one server event log                                             |
 
 ## Layout
@@ -60,6 +61,7 @@ Headless variant (the script plays the human too): start the server, then `cd ag
 ```
 server/   MCP server, dashboard API, event bus
 agent/    scripted demo agent with its own DID
+proxy/    stdio signing proxy for Claude Desktop
 web/      Vite + React + Tailwind dashboard
 shared/   event and DTO types shared by server and web
 ```

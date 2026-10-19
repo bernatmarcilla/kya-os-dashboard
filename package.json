@@ -6,7 +6,8 @@
     "shared",
     "server",
     "agent",
-    "web"
+    "web",
+    "proxy"
   ],
   "scripts": {
     "server": "npm run dev -w server",
@@ -14,7 +15,9 @@
     "web": "npm run dev -w web",
     "typecheck": "npm run typecheck -ws --if-present",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "proxy:config": "npm run print-config -w proxy --silent",
+    "proxy:smoke": "npm run smoke -w proxy"
   },
   "devDependencies": {
     "prettier": "^3.9.10"
